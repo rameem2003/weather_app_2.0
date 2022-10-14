@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background-color: rgb(198, 222, 243);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.wrapper{
+    width: 350px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5),
+                -10px 10px 15px rgba(255, 255, 255, 0.5);
+    /* height: 660px; */
+    height: 220px;
+    transition: 0.5s linear;
+}
+
+.wrapper .title{
+    text-align: center;
+}
+
+.wrapper .title h1 > sup{
+    background-color: rgb(113, 170, 219);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.wrapper .search_bar{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.wrapper .search_bar input{
+    height: 70px;
+    width: 80%;
+    font-size: 20px;
+    padding: 0 20px;
+    border: 8px solid rgb(198, 222, 243);
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5),
+    -10px 10px 10px rgba(255, 255, 255, 0.5),
+    inset 10px 10px 10px rgba(0, 0, 0, 0.5),
+    inset -10px 10px 10px rgba(255, 255, 255, 0.5);
+    background-color: rgb(198, 222, 243);
+}
+
+.wrapper .search_bar input::placeholder{
+    color: black;
+}
+
+.wrapper .search_bar button{
+    width: 20%;
+    height: 70px;
+    border: 8px solid rgb(198, 222, 243);
+    outline: none;
+    border-radius: 10px;
+    font-size: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5),
+    -8px 8px 8px rgba(255, 255, 255, 0.5);
+    background-color: rgb(198, 222, 243);
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.wrapper .search_bar button:active{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5),
+    -5px 5px 5px rgba(255, 255, 255, 0.5),
+    inset 5px 5px 5px rgba(0, 0, 0, 0.5),
+    inset -5px 5px 5px rgba(255, 255, 255, 0.5);
+}
+.wrapper .my_location{
+    text-align: center;
+}
+
+.wrapper .my_location button{
+    width: 90%;
+    height: 50px;
+    border: 5px solid rgb(198, 222, 243);
+    outline: none;
+    border-radius: 20px;
+    font-size: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5),
+    -8px 8px 8px rgba(255, 255, 255, 0.5);
+    background-color: rgb(198, 222, 243);
+    cursor: pointer;
+}
+
+.wrapper .my_location button:active{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5),
+    -5px 5px 5px rgba(255, 255, 255, 0.5),
+    inset 5px 5px 5px rgba(0, 0, 0, 0.5),
+    inset -5px 5px 5px rgba(255, 255, 255, 0.5);
+}
+
+.wrapper .containt{
+    text-align: center;
+    margin-top: 50px;
+    visibility: hidden;
+}
+
+.wrapper img{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 8px solid rgb(198, 222, 243);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5),
+    -5px 5px 5px rgba(255, 255, 255, 0.5),
+    inset 5px 5px 5px rgba(0, 0, 0, 0.5),
+    inset -5px 5px 5px rgba(255, 255, 255, 0.5);
+}
+
+.wrapper .containt #min_max_temp,
+.wrapper .containt #others{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.wrapper .containt #min_max_temp .left,
+.wrapper .containt #min_max_temp .right,
+.wrapper .containt #others .left,
+.wrapper .containt #others .right{
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 28px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5),
+    -5px 5px 5px rgba(255, 255, 255, 0.5),
+    inset 5px 5px 5px rgba(0, 0, 0, 0.5),
+    inset -5px 5px 5px rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+}
