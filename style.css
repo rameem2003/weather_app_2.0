@@ -5,6 +5,28 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.theme_btn{
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(198, 222, 243);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5),
+    -10px 10px 15px rgba(255, 255, 255, 0.5);
+    border: 5px solid rgb(198, 222, 243);
+    border-radius: 50%;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.theme_btn:active{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5),
+    -5px 5px 5px rgba(255, 255, 255, 0.5),
+    inset 5px 5px 5px rgba(0, 0, 0, 0.5),
+    inset -5px 5px 5px rgba(255, 255, 255, 0.5);
+}
+
 body{
     background-color: rgb(198, 222, 243);
     display: flex;
@@ -13,15 +35,28 @@ body{
     height: 100vh;
 }
 
+body.dark{
+    background-color: #333333;
+}
+
 .wrapper{
     width: 350px;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5),
-                -10px 10px 15px rgba(255, 255, 255, 0.5);
+    box-shadow: 10px 10px 15px rgb(0 0 0 / 50%), 
+    -12px -11px 15px rgb(255 255 255 / 50%), 
+    inset 10px 10px 15px rgb(0 0 0 / 50%), 
+    inset -10px 10px 15px rgb(255 255 255 / 50%);
     /* height: 660px; */
     height: 220px;
     transition: 0.5s linear;
+    background-color: rgb(198, 222, 243);
+}
+.wrapper.dark{
+    background-color: #333333;
+    box-shadow: -3px -4px 7px 0px rgb(255 255 255 / 31%), 
+                12px 13px 10px rgb(0 0 0 / 55%);
+    color: white;
 }
 
 .wrapper .title{
@@ -43,7 +78,7 @@ body{
     justify-content: space-evenly;
 }
 
-.wrapper .search_bar input{
+.wrapper .search_bar #cityName{
     height: 70px;
     width: 80%;
     font-size: 20px;
@@ -58,11 +93,22 @@ body{
     background-color: rgb(198, 222, 243);
 }
 
-.wrapper .search_bar input::placeholder{
+.wrapper .search_bar #cityName::placeholder{
     color: black;
 }
 
-.wrapper .search_bar button{
+.wrapper .search_bar #cityName.dark{
+    border: 8px solid #333333;
+    background-color: #333333;
+    box-shadow: 5px 5px 10px rgb(0 0 0 / 50%), -5px -5px 10px rgb(255 255 255 / 50%), inset 5px 5px 10px rgb(0 0 0 / 50%), inset -5px -5px 10px rgb(255 255 255 / 50%);
+    color: white;
+}
+
+.wrapper .search_bar #cityName.dark::placeholder{
+    color: white;
+}
+
+.wrapper .search_bar #search{
     width: 20%;
     height: 70px;
     border: 8px solid rgb(198, 222, 243);
@@ -76,7 +122,15 @@ body{
     margin-left: 10px;
 }
 
-.wrapper .search_bar button:active{
+.wrapper .search_bar #search.dark{
+    color: white;
+    border: 8px solid #333333;
+    background-color: #333333;
+    box-shadow: 5px 5px 10px rgb(0 0 0 / 50%), -5px -5px 10px rgb(255 255 255 / 50%);
+
+}
+
+.wrapper .search_bar #search:active{
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5),
     -5px 5px 5px rgba(255, 255, 255, 0.5),
     inset 5px 5px 5px rgba(0, 0, 0, 0.5),
@@ -86,7 +140,7 @@ body{
     text-align: center;
 }
 
-.wrapper .my_location button{
+.wrapper .my_location #my_loc{
     width: 90%;
     height: 50px;
     border: 5px solid rgb(198, 222, 243);
@@ -99,7 +153,14 @@ body{
     cursor: pointer;
 }
 
-.wrapper .my_location button:active{
+.wrapper .my_location #my_loc.dark{
+    color: white;
+    border: 5px solid #333333;
+    background-color: #333333;
+    box-shadow: 5px 5px 10px rgb(0 0 0 / 50%), -5px -5px 10px rgb(255 255 255 / 50%);
+}
+
+.wrapper .my_location #my_loc:active{
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5),
     -5px 5px 5px rgba(255, 255, 255, 0.5),
     inset 5px 5px 5px rgba(0, 0, 0, 0.5),
@@ -112,15 +173,22 @@ body{
     visibility: hidden;
 }
 
-.wrapper img{
+.wrapper #icon{
     height: 120px;
     width: 120px;
     border-radius: 50%;
+    margin: 10px 0;
     border: 8px solid rgb(198, 222, 243);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5),
     -5px 5px 5px rgba(255, 255, 255, 0.5),
     inset 5px 5px 5px rgba(0, 0, 0, 0.5),
     inset -5px 5px 5px rgba(255, 255, 255, 0.5);
+}
+
+.wrapper #icon.dark{
+    border: 8px solid #333333;
+    color: white;
+    box-shadow: 8px 8px 5px rgb(0 0 0 / 50%), -5px -5px 5px rgb(255 255 255 / 50%), inset 5px 5px 5px rgb(0 0 0 / 50%), inset -3px -3px 5px rgb(255 255 255 / 50%);
 }
 
 .wrapper .containt #min_max_temp,
