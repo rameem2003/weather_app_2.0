@@ -47,13 +47,13 @@ const onSuccess = (position) => {
 
         state.innerHTML = `${data.weather[0].main}`;
 
-        temp_max.innerHTML = `${data.main.temp_max} °C`;
+        temp_max.innerHTML = `<i class="fas fa-thermometer-full"></i> ${data.main.temp_max} °C`;
 
-        temp_min.innerHTML = `${data.main.temp_min} °C`;
+        temp_min.innerHTML = `<i class="fas fa-thermometer-half"></i> ${data.main.temp_min} °C`;
 
-        humi.innerHTML = `${data.main.humidity} %`;
+        humi.innerHTML = `<i class="fas fa-tint"></i> ${data.main.humidity} %`;
 
-        speed.innerHTML = `${data.wind.speed} Km/h`;
+        speed.innerHTML = `<i class="fas fa-wind"></i> ${data.wind.speed} KMH`;
 
     })
 }
@@ -96,14 +96,15 @@ search_btn.addEventListener("click", () => {
 
         state.innerHTML = `${data.weather[0].main}`;
 
-        temp_max.innerHTML = `${data.main.temp_max} °C`;
+        temp_max.innerHTML = `<i class="fas fa-thermometer-full"></i> ${data.main.temp_max} °C`;
 
-        temp_min.innerHTML = `${data.main.temp_min} °C`;
+        temp_min.innerHTML = `<i class="fas fa-thermometer-half"></i> ${data.main.temp_min} °C`;
 
-        humi.innerHTML = `${data.main.humidity} %`;
+        humi.innerHTML = `<i class="fas fa-tint"></i> ${data.main.humidity} %`;
 
-        speed.innerHTML = `${data.wind.speed} Km/h`;
+        speed.innerHTML = `<i class="fas fa-wind"></i> ${data.wind.speed} Km/h`;
     })
+
 })
 
 
